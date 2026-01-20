@@ -17,7 +17,7 @@ setup() {
 }
 
 @test "Optional value changes behaviour" {
-  export BUILDKITE_PLUGIN_DUMMY_OPTIONAL='other value'
+  export BUILDKITE_PLUGIN_SAMPLE_OPTIONAL='other value'
 
   run "$PWD"/hooks/command
 

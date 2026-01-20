@@ -1,4 +1,4 @@
-name: Dummy Buildkite Plugin
+name: Sample Buildkite Plugin
 description: Exceptional functionality
 author: https://github.com/lizrabuya
 requirements:

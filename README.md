@@ -24,7 +24,7 @@ steps:
   - label: "🔨 Basic plugin usage"
     command: "echo processing"
     plugins:
-      - dummy#v0.0.1: ~
+      - sample#v0.0.1: ~
 ```
 
 ### With optional parameters
@@ -36,7 +36,7 @@ steps:
   - label: "🔨 Plugin with options"
     command: "echo processing with options"
     plugins:
-      - dummy#v0.0.1:
+      - sample#v0.0.1:
           optional: "optional-value"
 ```
 
