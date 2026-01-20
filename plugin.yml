@@ -1,0 +1,10 @@
+name: Dummy Buildkite Plugin
+description: Exceptional functionality
+author: https://github.com/lizrabuya
+requirements:
+  - bash
+configuration:
+  properties:
+    optional:
+      type: string
+      description: "An optional configuration for your plugin."

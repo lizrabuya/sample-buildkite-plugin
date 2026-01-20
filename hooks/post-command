@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+set -euo pipefail
+
+# Load plugin library
+# shellcheck source=lib/plugin.bash
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
+
+# Main Execution
+log_section "Setting up post-command tasks"
