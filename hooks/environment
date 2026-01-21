@@ -7,4 +7,5 @@ set -euo pipefail
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
-log_section ":house_with_garden: Setting up environment"
+log_section ":house_with_garden: Plugin setting up environment"
+log_success "Plugin executed successfully"
