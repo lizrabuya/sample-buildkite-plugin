@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+set -euo pipefail
+
+# Load plugin library
+# shellcheck source=lib/plugin.bash
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
+
+# Main Execution
+log_section ":house_with_garden: Plugin setting up pre-exit tasks"
+log_success "Plugin executed successfully"
