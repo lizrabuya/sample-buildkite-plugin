@@ -45,7 +45,9 @@ main() {
 
   log_info "Running plugin with options:"
   log_info "optional: ${optional_option}"
-     
+
+  log_info "Checking BUILDKITE_HOOKS_PATH: ${BUILDKITE_HOOKS_PATH:-not set}"
+
   # Your main plugin logic here
   log_success "Plugin executed successfully"
 }
