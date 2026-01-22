@@ -9,4 +9,6 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
 log_section ":house_with_garden: Plugin setting up post-command tasks"
+
+export PLUGIN_POST_COMMAND_RAN="true"
 log_success "Plugin executed successfully"

@@ -8,4 +8,5 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
 log_section ":house_with_garden: Plugin setting up environment"
+export PLUGIN_ENVIRONMENT_SET="true"
 log_success "Plugin executed successfully"

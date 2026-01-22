@@ -8,4 +8,12 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
 log_section ":house_with_garden: Plugin setting up post-checkout tasks"
+log_info "Checking out pre-checkout tasks"
+if [ "${PLUGIN_PRE_CHECKOUT_RAN:-false}" = "true" ]; then
+  log_info "Pre-checkout tasks were run"
+else
+  log_warning "Pre-checkout tasks were not run"
+fi
+export PLUGIN_POST_CHECKOUT_RAN="true"
+
 log_success "Plugin executed successfully"

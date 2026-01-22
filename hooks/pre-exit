@@ -9,4 +9,13 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
 log_section ":house_with_garden: Plugin setting up pre-exit tasks"
+
+log_info "Performing pre-exit operations"
+log_error "Verifying that all prior hooks ran successfully"
+if [ "${PLUGIN_POST_COMMAND_RAN:-false}" = "true" ] && [ "${PLUGIN_POST_CHECKOUT_RAN:-false}" = "true" ] && [ "${PLUGIN_ENVIRONMENT_SET:-false}" = "true" ]; then
+  log_success "All prior hooks ran successfully"
+else
+  log_warning "Some prior hooks did not run successfully"
+fi
+
 log_success "Plugin executed successfully"
