@@ -16,7 +16,7 @@ else
 fi
 
 # Create a log file to demonstrate post-checkout actions
-LOG_FILE="post_checkout_logfile.txt"
+LOG_FILE=${PLUGIN_LOGFILE:-"post_checkout_logfile.txt"}
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Create the log line

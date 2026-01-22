@@ -65,6 +65,16 @@ main() {
   else
     log_warning "Post-checkout tasks were not run"
   fi
+
+  # check if you can access the plugin log file set in environment hook
+  local log_file="${PLUGIN_LOGFILE:-plugin_default_log.txt}"
+  log_info "Accessing plugin log file at:  $(pwd)/${log_file}" 
+  if [ -f "$log_file" ]; then
+    log_info "Plugin log file exists. Log file content:"
+    cat "$log_file"  
+  else
+    log_warning "Plugin log file does not exist."
+  fi
   export PLUGIN_COMMAND_RAN="true"
 
   # Your main plugin logic here
