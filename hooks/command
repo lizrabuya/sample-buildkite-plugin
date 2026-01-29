@@ -42,10 +42,11 @@ main() {
   validate_timeout
 
   echo "--- :hammer: Running plugin"
-
+  
   log_info "Running plugin with options:"
   log_info "optional: ${optional_option}"
 
+  log_info "Checking BUILDKITE_BOOTSTRAP_PHASES: ${BUILDKITE_BOOTSTRAP_PHASES:-not set}"
   log_info "Checking BUILDKITE_HOOKS_PATH: ${BUILDKITE_HOOKS_PATH:-not set}"
   log_info "Verifying pre command hooks ran:"
   if [ "${PLUGIN_ENVIRONMENT_SET:-false}" = "true" ]; then
