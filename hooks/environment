@@ -9,6 +9,16 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 # Main Execution
 log_section ":house_with_garden: Plugin setting up environment"
 log_info "Checking BUILDKITE_BOOTSTRAP_PHASES: ${BUILDKITE_BOOTSTRAP_PHASES:-not set}"
+if [[ "$BUILDKITE_BOOTSTRAP_PHASES" == *"checkout"* ]]; then
+  # Only run in checkout container
+  log_info "Running hook in checkout container"
+fi
+
+if [[ "$BUILDKITE_BOOTSTRAP_PHASES" == *"command"* ]]; then
+  # Only run in checkout container
+  log_info "Running hook in command container"
+fi
+
 export PLUGIN_LOGFILE="sample_plugin_logs.txt"
 export PLUGIN_ENVIRONMENT_SET="true"
 log_success "Plugin executed successfully"
