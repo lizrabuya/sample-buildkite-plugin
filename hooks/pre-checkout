@@ -9,5 +9,6 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../lib/plugin.bash"
 
 # Main Execution
 log_section ":house_with_garden: Plugin setting up plugin pre-checkout tasks"
+log_info "Checking BUILDKITE_BOOTSTRAP_PHASES: ${BUILDKITE_BOOTSTRAP_PHASES:-not set}"
 export PLUGIN_PRE_CHECKOUT_RAN="true"
 log_success "Plugin executed successfully"
